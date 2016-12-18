@@ -1,0 +1,266 @@
+{
+  "leagues": {
+    "1": {
+      "id": 1,
+      "name": "Serie A",
+      "founded": 1898,
+      "country": "Italy",
+      "description": "Serie A, also called Serie A TIM due to sponsorship by TIM, is a professional league competition for football clubs located at the top of the Italian football league system and has been operating for over eighty years since the 1929–30 season.",
+      "teams": [
+        101,
+        102
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "La Liga",
+      "founded": 1929,
+      "country": "Spain",
+      "description": "The Primera División, commonly known as La Liga and as La Liga Santander for sponsorship reasons, is the top professional association football division of the Spanish football league system.",
+      "teams": [
+        103,
+        104
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Premier league",
+      "founded": 1992,
+      "country": "England",
+      "description": "The Premier league is an English professional league for men's association football clubs.",
+      "teams": []
+    },
+    "4": {
+      "id": 4,
+      "name": "Bundesliga",
+      "founded": 1963,
+      "country": "Germany",
+      "description": "The Bundesliga, is a professional association football league in Germany and the football league with the highest average stadium attendance worldwide.",
+      "teams": []
+    }
+  },
+  "teams": {
+    "101": {
+      "id": 101,
+      "name": "Juventus F.C.",
+      "founded": 1987,
+      "shirt": "Adidas",
+      "city": "Turin",
+      "league": 1,
+      "stadium": 201,
+      "manager": 301,
+      "players": [
+        401,
+        402
+      ]
+    },
+    "102": {
+      "id": 102,
+      "name": "A.C. Milan",
+      "founded": 1899,
+      "shirt": "Adidas",
+      "city": "Milan",
+      "league": 1,
+      "stadium": 202,
+      "manager": 302,
+      "players": [
+        403,
+        404
+      ]
+    },
+    "103": {
+      "id": 103,
+      "name": "Real Madrid C.F.",
+      "founded": 1902,
+      "shirt": "Adidas",
+      "city": "Madrid",
+      "league": 2,
+      "stadium": 203,
+      "manager": 303,
+      "players": [
+        405,
+        406
+      ]
+    },
+    "104": {
+      "id": 104,
+      "name": "FC Barcelona",
+      "founded": 1899,
+      "shirt": "Nike",
+      "city": "Barcelona",
+      "league": 2,
+      "stadium": 204,
+      "manager": 304,
+      "players": [
+        407,
+        408
+      ]
+    }
+  },
+  "stadiums": {
+    "201": {
+      "id": 201,
+      "name": "Juventus Stadium",
+      "capacity": 41.475,
+      "runningTrack": false,
+      "opened": 2011,
+      "teams": [
+        101
+      ]
+    },
+    "202": {
+      "id": 202,
+      "name": "Giuseppe Meazza",
+      "capacity": 80.018,
+      "runningTrack": false,
+      "opened": 1926,
+      "teams": [
+        102
+      ]
+    },
+    "203": {
+      "id": 203,
+      "name": "Santiago Bernabeu Stadium",
+      "capacity": 85.454,
+      "runningTrack": false,
+      "opened": 1947,
+      "teams": [
+        103
+      ]
+    },
+    "204": {
+      "id": 204,
+      "name": "Camp Nou",
+      "capacity": 99.354,
+      "runningTrack": false,
+      "opened": 1957,
+      "teams": [
+        104
+      ]
+    }
+  },
+  "managers": {
+    "301": {
+      "id": 301,
+      "name": "Massimiliano Allegri",
+      "birthday": "11 August 1967",
+      "country": "Italy",
+      "height": 1.83,
+      "team": 101
+    },
+    "302": {
+      "id": 302,
+      "name": "Vincenzo Montella",
+      "birthday": "18 June 1974",
+      "country": "Italy",
+      "height": 1.72,
+      "team": 102
+    },
+    "303": {
+      "id": 303,
+      "name": "Zinedine Zidane",
+      "birthday": "23 June 1972",
+      "country": "France",
+      "height": 1.85,
+      "team": 103
+    },
+    "304": {
+      "id": 304,
+      "name": "Luis Enrique",
+      "birthday": "8 May 1970",
+      "country": "Spain",
+      "height": 1.80,
+      "team": 104
+    }
+  },
+  "players": {
+    "401": {
+      "id": 401,
+      "name": "Gianluigi Buffon",
+      "birthday": "28 January 1978",
+      "country": "Italy",
+      "height": 1.91,
+      "captain": true,
+      "position": "GK",
+      "number": 1,
+      "team": 101
+    },
+    "402": {
+      "id": 402,
+      "name": "Paulo Dybala",
+      "birthday": "15 November 1993",
+      "country": "Argentina",
+      "height": 1.77,
+      "captain": false,
+      "position": "FW",
+      "number": 21,
+      "team": 101
+    },
+    "403": {
+      "id": 403,
+      "name": "Riccardo Montolivo",
+      "birthday": "18 January 1985",
+      "country": "Italy",
+      "height": 1.82,
+      "captain": true,
+      "position": "MF",
+      "number": 18,
+      "team": 102
+    },
+    "404": {
+      "id": 404,
+      "name": "Mattia De Sciglio",
+      "birthday": "20 October 1992",
+      "country": "Italy",
+      "height": 1.83,
+      "captain": false,
+      "position": "DF",
+      "number": 2,
+      "team": 102
+    },
+    "405": {
+      "id": 405,
+      "name": "Sergio Ramos",
+      "birthday": "30 March 1986",
+      "country": "Spain",
+      "height": 1.83,
+      "captain": true,
+      "position": "DF",
+      "number": 4,
+      "team": 103
+    },
+    "406": {
+      "id": 406,
+      "name": "Cristiano Ronaldo",
+      "birthday": "5 February 1985",
+      "country": "Portugal",
+      "height": 1.85,
+      "captain": false,
+      "position": "FW",
+      "number": 7,
+      "team": 103
+    },
+    "407": {
+      "id": 407,
+      "name": "Andrés Iniesta",
+      "birthday": "11 May 1984",
+      "country": "Spain",
+      "height": 1.71,
+      "captain": true,
+      "position": "MF",
+      "number": 8,
+      "team": 104
+    },
+    "408": {
+      "id": 408,
+      "name": "Lionel Messi",
+      "birthday": "24 June 1987",
+      "country": "Argentina",
+      "height": 1.70,
+      "captain": false,
+      "position": "FW",
+      "number": 10,
+      "team": 104
+    }
+  }
+}

@@ -4,15 +4,14 @@
   "scripts": {
     "dev": "nodemon -w server --exec \"babel-node server --presets es2015\"",
     "build": "babel server -s -D -d dist --presets es2015",
-    "start": "node dist"
+    "start": "node dist",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "express": "4.14.0",
     "express-graphql": "0.6.1",
     "graphql": "0.8.2",
-    "lodash": "4.17.2"
-  },
-  "devDependencies": {
+    "lodash": "4.17.2",
     "babel-cli": "6.18.0",
     "babel-core": "6.20.0",
     "babel-loader": "6.2.10",

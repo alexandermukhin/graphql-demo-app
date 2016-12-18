@@ -30,7 +30,17 @@ class Leagues extends BaseClass {
 
 }
 class Teams extends BaseClass {
+    addPlayerToTeam(teamId, playerId) {
+        this.entities[teamId].players.push(parseInt(playerId, 10));
+    }
 
+    removePlayerFromTeam(teamId, playerId) {
+        const index = this.entities[teamId].players.indexOf(parseInt(playerId, 10));
+
+        if (index !== -1) {
+            this.entities[teamId].players.splice(index, 1);
+        }
+    }
 }
 class Stadiums extends BaseClass {
 
@@ -50,7 +60,9 @@ class Players extends BaseClass {
     add(player, args) {
         const id = Players.getID(values(this.entities));
 
-        this.entities[id] = Object.assign(args.player, {id});
+        this.entities[id] = Object.assign(args.player, { id });
+
+        teams.addPlayerToTeam(args.player.team, id);
 
         return this.getOne(id);
     }
@@ -62,6 +74,11 @@ class Players extends BaseClass {
 
         if (!this.entities[args.player.id]) {
             return new GraphQLError('No player found!');
+        }
+
+        if (args.player.team !== this.entities[args.player.id].team) {
+            teams.removePlayerFromTeam(this.entities[args.player.id].team, args.player.id);
+            teams.addPlayerToTeam(args.player.team, args.player.id);
         }
 
         this.entities[args.player.id] = Object.assign(this.entities[args.player.id], args.player);
@@ -79,6 +96,8 @@ class Players extends BaseClass {
         }
 
         const response = this.entities[args.id];
+
+        teams.removePlayerFromTeam(response.team, response.id);
 
         delete this.entities[args.id];
 

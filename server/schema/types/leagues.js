@@ -14,12 +14,12 @@ import * as DB      from '../../db';
 export const LeagueType = new GraphQLObjectType({
     name  : 'League',
     fields: () => ({
-        id          : { type: new GraphQLNonNull(GraphQLID) },
-        name        : { type: new GraphQLNonNull(GraphQLString) },
-        founded     : { type: new GraphQLNonNull(GraphQLInt) },
-        country     : { type: new GraphQLNonNull(GraphQLString) },
-        descriptions: { type: GraphQLString },
-        teams       : {
+        id         : { type: new GraphQLNonNull(GraphQLID) },
+        name       : { type: new GraphQLNonNull(GraphQLString) },
+        founded    : { type: new GraphQLNonNull(GraphQLInt) },
+        country    : { type: new GraphQLNonNull(GraphQLString) },
+        description: { type: GraphQLString },
+        teams      : {
             type   : new GraphQLList(types.TeamType),
             resolve: (league, args) => DB.teams.getList(league.teams)
         }
